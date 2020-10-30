@@ -3,5 +3,5 @@ $(function() {
 
   setTimeout(function() {
     $(".intro__text--hide").addClass("ani");
-  }, 1200);
+  }, 1500);
 });
