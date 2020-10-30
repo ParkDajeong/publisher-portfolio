@@ -1,0 +1,72 @@
+/* Intro */
+.intro {
+  background-color: lemonchiffon;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.intro__text-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+}
+
+.intro__text {
+  display: block;
+}
+
+.intro__text--show {
+  position: absolute;
+  font-size: 40px;
+  padding: 5px 0;
+  transition: all 1.1s ease-in-out 250ms;
+}
+
+.intro__text--show:first-child {
+  top: 10px;
+  padding-top: 0;
+}
+
+.intro__text-box.ani .intro__text--show:first-child {
+  top: -25px;
+}
+
+.intro__text--show:last-child {
+  bottom: 10px;
+}
+
+.intro__text-box.ani .intro__text--show:last-child {
+  bottom: -28px;
+}
+
+.intro__text--hide {
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 31px;
+  transition: all 1.1s ease-in-out;
+}
+
+.intro__text-box.ani .intro__text--hide.ani {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+}
+
+/* Main */
+.main-content {
+  background-color: #fff;
+  position: relative;
+  margin-top: 100vh;
+  padding-top: 50px;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
+}
