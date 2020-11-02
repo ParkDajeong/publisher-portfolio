@@ -1,3 +1,4 @@
+/* Logo */
 .logo {
   width: 80px;
   height: 80px;
@@ -16,9 +17,25 @@
 }
 
 .logo__link:hover svg {
-  fill: #004a55;
+  /* fill: #004a55; */
+  fill: #8c6969;
 }
 
+/* Typing */
+.typing {
+  position: relative;
+}
+
+.typing::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  content: "";
+  padding: 0 1px;
+  animation: cursor 0.8s ease-in-out 4s infinite;
+}
+
+/* Scroll Down Sign */
 .scroll-down-arrow {
   position: absolute;
   top: 50%;
@@ -31,7 +48,7 @@
 }
 
 .scroll-down-arrow__line {
-  background-color: #4b4b4b;
+  background-color: #fff;
   position: absolute;
   top: 0;
   left: 50%;
@@ -44,7 +61,26 @@
   position: absolute;
   bottom: -7px;
   width: 100%;
-  fill: #4b4b4b;
+  fill: #fff;
+}
+
+/* Source */
+.source {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.source::before {
+  content: "📸";
+  margin-right: 3px;
+  font-size: 15px;
+}
+
+.source a:hover {
+  text-decoration: underline;
 }
 
 .section-title {
@@ -63,7 +99,7 @@
   font-size: 15px;
 }
 
-/* ============== 반응형 ============== */
+/* ============== 애니메이션 ============== */
 @keyframes scroll {
   0% {
     transform: translate(-50%, -100%);
@@ -76,9 +112,28 @@
   }
 }
 
+@keyframes cursor {
+  0% {
+    border-right: 1px solid #000;
+  }
+  50% {
+    border-right: 1px solid transparent;
+  }
+  100% {
+    border-right: 1px solid #000;
+  }
+}
+
 /* ============== 반응형 ============== */
 @media only screen and (max-width: 768px) {
   .section-title {
     font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .scroll-down-arrow {
+    right: initial;
+    opacity: 0.5;
   }
 }
