@@ -1,3 +1,14 @@
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 40px;
+  padding-left: 60px;
+  z-index: 100;
+}
+
 /* Intro */
 .intro {
   background-color: lemonchiffon;
@@ -18,16 +29,18 @@
   align-items: center;
   width: 100%;
   height: 130px;
+  letter-spacing: -1.1px;
 }
 
 .intro__text {
   display: block;
+  /* color: lemonchiffon; */
 }
 
 .intro__text--show {
   position: absolute;
   font-size: 40px;
-  transition-property: top, bottom, font-size;
+  transition-property: top, bottom;
   transition-duration: 1.3s;
   transition-timing-function: ease-in-out;
   transition-delay: 250ms;
@@ -64,6 +77,15 @@
   overflow: visible;
   opacity: 1;
   transform: scale(2.4);
+}
+
+.scroll-down-arrow.ani {
+  opacity: 1;
+  transition: opacity 1.3s ease-in-out 1s;
+}
+
+.scroll-down-arrow.ani .scroll-down-arrow__line {
+  animation: scroll 4s infinite normal;
 }
 
 /* Main */
