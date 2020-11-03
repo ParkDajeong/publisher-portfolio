@@ -123,17 +123,58 @@
   align-items: center;
 }
 
-.profile__photo {
+.profile__left {
   flex-shrink: 0;
-  width: 250px;
-  height: 310px;
   margin-right: 24px;
   overflow: hidden;
+}
+
+.profile__photo {
+  width: 250px;
+  height: auto;
+  margin-bottom: 10px;
   border-radius: 20px;
 }
 
-.profile__photo img {
+.profile__contact {
+  display: flex;
+  justify-content: center;
+}
+
+.profile__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.profile__link--phone {
+  margin-right: 26px;
+}
+
+.profile__link svg {
+  position: relative;
+  top: -1px;
+  width: 24px;
   height: auto;
+  margin-right: 5px;
+  fill: #2d2d2d;
+}
+
+.profile__link--phone:hover {
+  color: seagreen;
+}
+
+.profile__link--phone:hover svg {
+  fill: seagreen;
+}
+
+.profile__link--mail:hover {
+  color: lightcoral;
+}
+
+.profile__link--mail:hover svg {
+  fill: lightcoral;
 }
 
 .profile__info-list {
@@ -148,10 +189,25 @@
   font-weight: 700;
 }
 
+.profile__info-title::before {
+  content: "💡";
+  position: relative;
+  top: -1px;
+  font-size: 15px;
+  padding-right: 4px;
+}
+
 .profile__info-desc {
   font-size: 15px;
-  padding-left: 3px;
+  padding-left: 10px;
   margin-bottom: 6px;
+}
+
+.profile__info-desc::before {
+  content: "•";
+  position: relative;
+  top: -1px;
+  margin-right: 5px;
 }
 
 /* Main - Project */
@@ -217,8 +273,12 @@
     flex-direction: column;
   }
 
-  .profile__photo {
+  .profile__left {
     margin: 16px 0 24px;
+  }
+
+  .profile__photo {
+    margin-bottom: 16px;
   }
 
   /* Main - Project */
