@@ -38,7 +38,6 @@
 
 .intro__text {
   display: block;
-  /* color: transparent; */
 }
 
 .intro__text--show {
@@ -162,19 +161,19 @@
 }
 
 .profile__link--phone:hover {
-  color: seagreen;
+  color: #2e8b57;
 }
 
 .profile__link--phone:hover svg {
-  fill: seagreen;
+  fill: #2e8b57;
 }
 
 .profile__link--mail:hover {
-  color: lightcoral;
+  color: #972f2f;
 }
 
 .profile__link--mail:hover svg {
-  fill: lightcoral;
+  fill: #972f2f;
 }
 
 .profile__info-list {
@@ -259,17 +258,34 @@
 }
 
 .project__title {
-  font-size: 20px;
+  font-size: 19px;
   margin-bottom: 5px;
 }
 
 .project__desc {
 }
 
+/* Footer */
+.footer {
+  background-color: #f9f9f9;
+  position: relative;
+  padding: 50px 15px;
+  z-index: 1;
+}
+
+.footer__copyright {
+  text-align: center;
+}
+
 @media only screen and (max-width: 1200px) {
   /* Main */
   .main-content {
     padding: 80px 8% 0;
+    z-index: 110;
+  }
+
+  /* Footer */
+  .footer {
     z-index: 110;
   }
 }
