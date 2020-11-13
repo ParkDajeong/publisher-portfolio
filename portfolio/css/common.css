@@ -45,35 +45,6 @@
   animation: cursor 0.8s ease-in-out 4s infinite;
 }
 
-/* Scroll Down Sign */
-.scroll-down-arrow {
-  position: absolute;
-  top: 50%;
-  right: 50px;
-  width: 20px;
-  height: 250px;
-  opacity: 0;
-  overflow: hidden;
-  transform: translateY(-50%);
-}
-
-.scroll-down-arrow__line {
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 3px;
-  height: 100%;
-  transform: translate(-50%, 0);
-}
-
-.scroll-down-arrow svg {
-  position: absolute;
-  bottom: -7px;
-  width: 100%;
-  fill: #fff;
-}
-
 /* Source */
 .source {
   position: absolute;
@@ -110,18 +81,6 @@
 }
 
 /* ============== 애니메이션 ============== */
-@keyframes scroll {
-  0% {
-    transform: translate(-50%, -100%);
-  }
-  5% {
-    transform: translate(-50%, -95%);
-  }
-  100% {
-    transform: translate(-50%, 100%);
-  }
-}
-
 @keyframes cursor {
   0% {
     border-right: 1px solid #000;
@@ -138,12 +97,5 @@
 @media only screen and (max-width: 768px) {
   .section-title {
     font-size: 1.8rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .scroll-down-arrow {
-    right: initial;
-    opacity: 0.5;
   }
 }

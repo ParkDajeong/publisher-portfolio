@@ -2,7 +2,7 @@
   font-family: "Raleway", "Noto Sans KR", sans-serif;
   box-sizing: border-box;
   margin: 0;
-  outline: none;
+  /* outline: none; */
 }
 
 html,

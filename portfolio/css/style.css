@@ -31,16 +31,16 @@
 }
 
 .contact-bar__link:first-child {
-  border-top-left-radius: 8px;
+  border-top-left-radius: 3px;
 }
 
 .contact-bar__link:last-child {
-  border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 3px;
 }
 
 .contact-bar__link:hover {
   right: 0;
-  border-radius: 8px 0 0 8px;
+  border-radius: 3px 0 0 3px;
 }
 
 .contact-bar__icon {
@@ -137,13 +137,20 @@
 }
 
 /* Intro - Scroll Down Sign */
-.scroll-down-arrow.ani {
-  opacity: 0.8;
-  transition: opacity 1.3s ease-in-out 1s;
+.intro__scroll-down-arrow {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  transform: translateX(-50%);
+  animation: scroll-down 1.1s ease-in infinite alternate;
 }
 
-.scroll-down-arrow.ani .scroll-down-arrow__line {
-  animation: scroll 4s infinite normal;
+.intro__scroll-down-arrow svg {
+  fill: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: auto;
 }
 
 /* Main */
@@ -188,11 +195,6 @@
   margin-bottom: 10px;
   border-radius: 20px;
 }
-
-/* .profile__contact {
-  display: flex;
-  justify-content: center;
-} */
 
 .profile__link {
   display: flex;
@@ -385,6 +387,16 @@
 
 .footer__copyright {
   text-align: center;
+}
+
+/* ============== 애니메이션 ============== */
+@keyframes scroll-down {
+  from {
+    bottom: 25px;
+  }
+  to {
+    bottom: 10px;
+  }
 }
 
 /* ============= 반응형 ============= */
