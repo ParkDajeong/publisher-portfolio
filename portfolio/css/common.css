@@ -1,3 +1,13 @@
+.sr-only {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
 /* Logo */
 .logo {
   width: 80px;
