@@ -144,7 +144,7 @@
 /* Intro - Scroll Down Sign */
 .intro__scroll-down-arrow {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   width: 37px;
   height: 37px;
@@ -174,9 +174,6 @@
 }
 
 /* Main - Profile */
-.main-content__profile {
-}
-
 .profile__hashtag-box {
   font-size: 16px;
   padding-left: 5px;
@@ -272,9 +269,6 @@
 }
 
 /* Main - Project */
-.main-content__project {
-}
-
 .project__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -503,7 +497,7 @@
   }
 
   .intro__text-box.ani .intro__text--hide.ani {
-    transform: scale(1.5);
+    transform: scale(1.65);
   }
 
   .intro__text--show:first-child {
@@ -520,5 +514,24 @@
 
   .intro__text-box.ani .intro__text--show:last-child {
     bottom: 7px;
+  }
+
+  /* Projects */
+  .project__list-item:hover .project__info {
+    height: 26%;
+    border-radius: 0 0 28px 28px;
+  }
+
+  .project__list-item:hover .project__title {
+    margin-bottom: 5px;
+    transform: scale(1);
+  }
+  
+  .project__list-item:hover .project__desc {
+    font-size: 15px;
+  }
+
+  .project__list-item:hover .project__text {
+    display: none;
   }
 }
